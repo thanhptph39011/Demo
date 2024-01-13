@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Type Coercion</h1>
+    <script>
+      let x;
+
+      // Ép kiểu thành chuỗi
+      x = 5 + "5";
+
+      x = 5 + Number("5");
+
+      // Ép kiểu thành số
+      x = 5 * "5";
+
+      // null được ép kiểu thành 0 vì nó là giá trị `falsy`
+      x = 5 + null;
+
+      x = Number(null);
+
+      x = Number(true);
+      x = Number(false);
+
+      // true được ép kiểu thành 1
+      x = 5 + true;
+
+      // false được ép kiểu thành 0 (falsy)
+      x = 5 + false;
+
+      // Undefined được ép kiểu thành 0 (falsy)
+      x = 5 + undefined;
+
+      console.log(x, typeof x);
+    </script>
+  </body>
+</html>

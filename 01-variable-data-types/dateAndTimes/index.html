@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>dates-and-times</h1>
+    <script>
+      let d;
+
+      // Lấy ngày và giờ hiện tại
+      d = new Date();
+console.log(d);
+      // Chuyển thành chuỗi
+      d = d.toString();
+      console.log(d);
+      // Lấy một ngày cụ thể
+      // Quan trọng: tháng tính từ 0, nghĩa là 0 là tháng 1 và 11 là tháng 12
+      d = new Date(2021, 0, 10, 12, 30, 0);
+      console.log(d);
+      // Truyền vào một chuỗi
+      d = new Date("2021-07-10T12:30:00");
+      d = new Date("07/10/2021 12:30:00");
+      d = new Date("2022-07-10");
+      d = new Date("07-10-2022");
+
+      // https://stackoverflow.com/questions/7556591/is-the-javascript-date-object-always-one-day-off
+
+      // Lấy timestamp hiện tại
+      d = Date.now();
+      console.log(d);
+      // Lấy timestamp của một ngày cụ thể
+      d = new Date();
+      d = d.getTime();
+      d = d.valueOf();
+
+      // Tạo một ngày từ timestamp
+      d = new Date(1666962049745);
+
+      // Chuyển từ mili giây sang giây
+      d = Math.floor(Date.now() / 1000);
+
+      console.log(d);
+    </script>
+  </body>
+</html>

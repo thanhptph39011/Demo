@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>array-nesting-concat-spread</h1>
+    <script>
+      let x;
+
+      const fruits = ["apple", "pear", "orange"];
+      const berries = ["strawberry", "blueberry", "raspberry"];
+
+      // Lồng ghép mảng
+
+      // Lồng ghép berries vào trong fruits
+      fruits.push(berries);
+      console.log(fruits);
+      x = fruits.flat(); //làm phẳng mảng
+      console.log(x);
+
+      // Bây giờ chúng ta có thể truy cập vào 'blueberry' với câu lệnh sau
+      x = fruits[3][1];
+    console.log(x);
+      // Tạo một biến mới và lồng ghép cả hai mảng
+      const allFruits = [fruits, berries];
+console.log(allFruits);
+      x = allFruits[1][2];
+console.log(x);
+      // concat() - Nối các mảng
+      x = fruits.concat(berries);
+console.log(x);
+      // toán tử spread (...) - Nối các mảng với nhau
+      x = [...fruits, ...berries];
+console.log(x);
+      // flat() - Làm phẳng một mảng
+      const arr = [1, 2, [3, 4, 5], 6, [7, 8]];
+      x = arr.flat();
+console.log(x);
+      // Các phương thức tĩnh của đối tượng Array
+
+      // isArray() - Kiểm tra xem có phải là một mảng không
+      x = Array.isArray(fruits);
+console.log(x);
+      // from() - Tạo một mảng từ một giá trị giống như mảng
+      x = Array.from("12345");
+console.log(x);
+      // of() - Tạo một mảng từ một tập hợp các giá trị
+      const a = 1;
+      const b = 2;
+      const c = 3;
+
+      x = Array.of(a, b, c);
+
+      console.log(x);
+    </script>
+  </body>
+</html>

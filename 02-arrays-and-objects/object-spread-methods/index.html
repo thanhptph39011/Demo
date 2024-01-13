@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>object-spread-methods</h1>
+    <script>
+      let x;
+
+      // Tạo đối tượng sử dụng constructor đối tượng
+      const todo = new Object();
+
+      todo.id = 1;
+      todo.name = "Mua sữa";
+      todo.completed = false;
+
+      x = todo;
+      console.log(x);
+
+      // Lồng đối tượng
+      const person = {
+        address: {
+          coords: {
+            lat: 42.9384,
+            lng: -71.3232,
+          },
+        },
+      };
+      console.log(person);
+      x = person.address.coords.lat;
+      console.log(x);
+      const obj1 = { a: 1, b: 2 };
+      const obj2 = { c: 3, d: 4 };
+      console.log(obj1);
+      console.log(obj2);
+      // Toán tử Spread
+      const obj3 = { ...obj1, ...obj2 };
+      console.log(obj3);
+      // Tương đương với việc sử dụng ...
+      const obj4 = Object.assign({}, obj1, obj2);
+      console.log(obj4);
+      // Mảng các đối tượng
+      const todos = [
+        { id: 1, name: "Mua sữa" },
+        { id: 2, name: "Đón con từ trường về" },
+        { id: 3, name: "Đổ rác" },
+      ];
+console.log( todos);
+      x = todos[0].name;
+console.log(x);
+      // Lấy mảng các key của đối tượng
+      x = Object.keys(todo);
+      console.log(x);
+      // Lấy độ dài của một đối tượng
+      x = Object.keys(todo).length;
+      console.log(x);
+      // Lấy mảng các giá trị của đối tượng
+      x = Object.values(todo);
+      console.log(x);
+      // Lấy mảng các cặp key/value của đối tượng
+      x = Object.entries(todo);
+      console.log(x);
+      // Kiểm tra xem đối tượng có thuộc tính không
+      x = todo.hasOwnProperty("id");
+      console.log(x);
+    </script>
+  </body>
+</html>

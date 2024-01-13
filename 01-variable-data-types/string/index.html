@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String</h1>
+    <script>
+        let x;
+
+const name = 'John';
+const age = 31;
+
+// Nối chuỗi
+x = 'Xin chào, tên tôi là ' + name + ' và tôi ' + age + ' tuổi';
+
+// Mẫu ký tự nhiều dòng
+x = `Xin chào, tên tôi là ${name} và tôi ${age} tuổi`;
+
+// Thuộc tính và phương thức của chuỗi
+
+// Tạo một "đối tượng chuỗi" (JS tự động thực hiện điều này khi sử dụng một thuộc tính hoặc phương thức trên một chuỗi cơ bản)
+const s = new String('Xin chào Thế giới');
+
+x = typeof s;
+console.log(x);
+
+x = s.length;
+console.log(x);
+// Truy cập giá trị theo chỉ số
+x = s[0];
+console.log(x);
+// Hiển thị nguyên mẫu của đối tượng chuỗi. Hiển thị các thuộc tính và phương thức
+x = s.__proto__;
+console.log(x);
+// Thay đổi ký tự hoa thường
+x = s.toUpperCase();//hoa
+x = s.toLowerCase();//thường
+
+// charAt() - trả về ký tự tại chỉ mục cụ thể
+x = s.charAt(0);
+console.log(x);
+// indexOf - trả về chỉ mục của sự xuất hiện đầu tiên của một giá trị cụ thể trong chuỗi
+x = s.indexOf('o');
+console.log(x);
+// substring() - tìm kiếm một chuỗi cho một giá trị cụ thể
+x = s.substring(3, 8);
+console.log(x);
+x = s.substring(8);
+console.log(x);
+// slice() - trích xuất một phần của chuỗi và trả về một chuỗi mới
+x = s.slice(-11, -6);
+
+// trim() - loại bỏ khoảng trắng từ đầu và cuối chuỗi
+x = '         Xin chào Thế giới';
+x = x.trim();
+
+// replace() - thay thế tất cả các trường hợp của một chuỗi
+x = s.replace('Thế giới', 'John');
+
+// includes() - trả về true nếu chuỗi được tìm thấy
+x = s.includes('Xin');
+
+// valueOf() - trả về giá trị nguyên thủy của một biến
+x = s.valueOf();
+
+// split() - trả về một mảng các chuỗi
+x = s.split('');
+
+console.log(x);
+    </script>
+</body>
+</html>

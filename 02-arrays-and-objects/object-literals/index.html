@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>object-literals</h1>
+    <script>
+      let x;
+
+      // Tạo một đối tượng
+      const person = {
+        name: "John Doe",
+        age: 30,
+        isAdmin: true,
+        address: {
+          street: "123 Main st",
+          city: "Boston",
+          state: "MA",
+        },
+        hobbies: ["music", "sports"],
+      };
+
+      // Truy cập các thuộc tính của đối tượng
+      x = person.name; // Dùng dấu chấm
+      x = person["age"]; // Dùng dấu ngoặc vuông
+      x = person.address.state;
+      x = person.hobbies[0];
+
+      // Cập nhật thuộc tính
+      person.name = "Jane Doe";
+      person["isAdmin"] = false;
+
+      // Xóa thuộc tính
+      delete person.age;
+
+      // Tạo thuộc tính mới
+      person.hasChildren = true;
+
+      // Thêm hàm vào đối tượng
+      person.greet = function () {
+        console.log(`Xin chào, tôi tên là ${this.name}`);
+      };
+
+      person.greet();
+
+      // Khai báo các key có nhiều từ
+      const person2 = {
+        "first name": "Brad",
+        "last name": "Traversy",
+      };
+
+      x = person2["first name"];
+
+      console.log(x);
+    </script>
+  </body>
+</html>

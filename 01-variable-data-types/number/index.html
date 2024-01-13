@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Number</h1>
+    <script>
+      let x;
+
+      const num = new Number(5);
+
+      // toString() - trả về một chuỗi biểu diễn của số
+      x = num.toString();
+      // Để lấy độ dài của chuỗi
+      x = num.toString().length;
+      console.log(x);
+      // toFixed() - trả về một chuỗi biểu diễn của số với số chữ số thập phân được chỉ định
+      x = num.toFixed(2);
+      console.log(x);
+
+      // toPrecision() - trả về một số với độ dài được chỉ định
+      x = num.toPrecision(3);
+      console.log(x);
+      // toExponential() - chuyển đổi một số sang dạng số mũ và trả về giá trị của nó dưới dạng chuỗi
+      x = num.toExponential(2);
+      console.log(x);
+      // toLocaleString() - trả về một chuỗi biểu diễn của số, sử dụng cài đặt ngôn ngữ hiện tại
+      x = num.toLocaleString("en-US");
+      console.log(x);
+
+      // valueOf - Lấy giá trị
+      x = num.valueOf();
+      console.log(x);
+      // Chính đối tượng Number cũng có một số thuộc tính và phương thức
+
+      // Số lớn nhất và nhỏ nhất có thể có
+      x = Number.MAX_VALUE;
+      x = Number.MIN_VALUE;
+
+      console.log(x);
+    </script>
+  </body>
+</html>

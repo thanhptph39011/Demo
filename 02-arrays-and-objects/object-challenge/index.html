@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>object-challenge</h1>
+    <script>
+        // Bước 1
+const library = [
+  {
+    title: 'The Road Ahead',
+    author: 'Bill Gates',
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+  {
+    title: 'Steve Jobs',
+    author: 'Walter Isaacson',
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+  {
+    title: 'Mockingjay',
+    author: 'Suzanne Collins',
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+];
+
+// Bước 2
+library[0].status.read = true;
+library[1].status.read = true;
+library[2].status.read = true;
+
+// Bước 3
+const { title: firstBook } = library[1];
+
+console.log(firstBook);
+
+// Bước 4
+const libraryJSON = JSON.stringify(library);
+
+console.log(libraryJSON);
+    </script>
+</body>
+</html>
