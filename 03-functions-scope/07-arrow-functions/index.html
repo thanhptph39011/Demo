@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Arrow Functions</h1>
+    <script>
+      //  Khai báo hàm thông thường
+      // function add(a, b) {
+      //   return a + b;
+      // }
+
+      // Cú pháp hàm mũi tên
+      const add = (a, b) => {
+        return a + b;
+      };
+
+      // Trả về ngầm định
+      const subtract = (a, b) => a - b;
+
+
+      // Có thể bỏ () với một tham số duy nhất
+      const double = (a) => a * 2;
+
+      // Trả về một đối tượng
+      const createObj = () => ({
+        name: "Brad",
+      });
+
+      const numbers = [1, 2, 3, 4, 5];
+
+      numbers.forEach(function (n) {
+        console.log(n);
+      });
+
+      // Hàm mũi tên trong một callback
+      numbers.forEach((n) => console.log(n));
+
+      console.log(add(1, 2)); //3
+      console.log(subtract(10, 5)); //5
+      console.log(double(10)); //20
+      console.log(createObj());
+    </script>
+  </body>
+</html>

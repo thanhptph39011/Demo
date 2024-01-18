@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Call Stack</h1>
+    <script>
+      // Mở tab 'sources' và đặt một điểm dừng tại hàm first()
+
+      // Ví dụ đầu tiên
+
+      function first() {
+        console.log("đầu tiên...");
+      }
+
+      function second() {
+        console.log("thứ hai...");
+      }
+
+      function third() {
+        console.log("thứ ba...");
+      }
+
+      first();
+      second();
+      third();
+
+      // Ví dụ thứ hai
+
+      // function first() {
+      //   console.log('đầu tiên...');
+      //   second();
+      // }
+
+      // function second() {
+      //   console.log('thứ hai...');
+      //   third();
+      // }
+
+      // function third() {
+      //   console.log('thứ ba...');
+      // }
+
+      // first();
+    </script>
+  </body>
+</html>

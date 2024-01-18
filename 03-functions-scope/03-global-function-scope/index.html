@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Global & Function Scope</h1>
+    <script>
+      // 'window' được phạm vi toàn cầu
+      // alert('Xin chào');
+      // console.log(innerWidth);
+
+      // Biến phạm vi toàn cầu
+      const x = 100;
+
+      console.log(x, "ở phạm vi toàn cầu");
+
+      function run() {
+        // Truy cập biến toàn cầu trong hàm
+        console.log(window.innerHeight);
+        console.log(x, "trong hàm");
+      }
+
+      run();
+
+      // Truy cập biến toàn cầu trong khối
+      if (true) {
+        console.log(x, "trong khối");
+      }
+
+      function add() {
+        // Ghi đè biến toàn cầu x (variable shadowing)
+        const x = 1;
+        const y = 50;
+        console.log(x + y);
+      }
+
+      // Không thể truy cập biến có phạm vi hàm trong phạm vi toàn cầu
+      console.log(y);
+
+      add();
+    </script>
+  </body>
+</html>
