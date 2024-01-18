@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Logical Operators</h1>
+    <script>
+      console.log(10 < 20 && 30 > 15 && 40 > 30); // Phải đều đúng
+      console.log(10 > 20 || 30 < 15); // Chỉ cần một đúng
+
+      // && - Sẽ trả về giá trị đầu tiên sai hoặc giá trị cuối cùng
+      let a;
+
+      a = 10 && 20;
+      a = 10 && 20 && 30;
+      a = 10 && 0 && 30;
+      a = 10 && "" && 0 && 30;
+
+      console.log(a);
+
+      const posts = ["Bài viết một", "Bài viết hai"];
+      posts.length > 0 && console.log(posts[0]);
+
+      // || - Sẽ trả về giá trị đầu tiên đúng hoặc giá trị cuối cùng
+
+      let b;
+
+      b = 10 || 20;
+      b = 0 || 20;
+      b = 0 || null || "" || undefined;
+
+      console.log(b);
+
+      // ?? - Trả về toán hạng bên phải khi toán hạng bên trái là null hoặc undefined
+
+      let c;
+
+      c = 10 ?? 20;
+      c = null ?? 20;
+      c = undefined ?? 30;
+      c = 0 ?? 30;
+      c = "" ?? 30;
+
+      console.log(c);
+    </script>
+  </body>
+</html>

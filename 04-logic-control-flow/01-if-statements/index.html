@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>If Statements</h1>
+    <script>
+      // Cú pháp câu lệnh If
+      if (true) {
+        console.log("Điều này là đúng");
+      }
+
+      if (false) {
+        console.log("Điều này KHÔNG đúng");
+      }
+
+      // Biểu thức đánh giá
+      const x = 10;
+      const y = 5;
+
+      if (x >= y) {
+        console.log(`${x} lớn hơn hoặc bằng ${y}`);
+      }
+
+      if (x === y) {
+        console.log(`${x} bằng ${y}`);
+      } else {
+        console.log(`${x} KHÔNG bằng ${y}`);
+      }
+
+      // Phạm vi block
+      if (x !== y) {
+        const z = 20;
+        console.log(`${z} là 20`);
+      }
+
+      console.log(z); // Gây lỗi
+
+      // Rút gọn If/Else
+      if (x >= y)
+        console.log(`${x} lớn hơn hoặc bằng ${y}`),
+          console.log("Điều này là đúng");
+      else console.log("Điều này là sai");
+    </script>
+  </body>
+</html>
