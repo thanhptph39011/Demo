@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Filter</h1>
+    <script>
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+      const evenNumbers = numbers.filter(function (number) {
+        return number % 2 === 0;
+      });
+
+      // Phiên bản rút gọn
+      const evenNumbers2 = numbers.filter((number) => number % 2 === 0);
+
+      // Tương tự với forEach
+      const evenNumbers3 = [];
+      numbers.forEach((number) => {
+        if (number % 2 === 0) {
+          evenNumbers.push(number);
+        }
+      });
+
+      const companies = [
+        { name: "Công ty Một", category: "Tài chính", start: 1981, end: 2004 },
+        { name: "Công ty Hai", category: "Bán lẻ", start: 1992, end: 2008 },
+        { name: "Công ty Ba", category: "Ô tô", start: 1999, end: 2007 },
+        { name: "Công ty Bốn", category: "Bán lẻ", start: 1989, end: 2010 },
+        { name: "Công ty Năm", category: "Công nghệ", start: 2009, end: 2014 },
+        { name: "Công ty Sáu", category: "Tài chính", start: 1987, end: 2010 },
+        { name: "Công ty Bảy", category: "Ô tô", start: 1986, end: 1996 },
+        { name: "Công ty Tám", category: "Công nghệ", start: 2011, end: 2016 },
+        { name: "Công ty Chín", category: "Bán lẻ", start: 1981, end: 1989 },
+      ];
+
+      // Lấy chỉ các công ty bán lẻ
+      const retailCompanies = companies.filter(
+        (company) => company.category === "Bán lẻ"
+      );
+      // console.log(retailCompanies);
+
+      // Lấy các công ty bắt đầu từ năm 1980 trở đi và kết thúc trước hoặc vào năm 2005
+      const earlyCompanies = companies.filter(
+        (company) => company.start >= 1980 && company.end <= 2005
+      );
+      // console.log(earlyCompanies);
+
+      // Lấy các công ty tồn tại từ 10 năm trở lên
+      const longCompanies = companies.filter(
+        (company) => company.end - company.start >= 10
+      );
+
+      console.log(longCompanies);
+    </script>
+  </body>
+</html>

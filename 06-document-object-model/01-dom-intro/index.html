@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main">
+      <h1>DOM Intro</h1>
+      <a href="https://traversymedia.com">Traversy Media</a>
+    </div>
+    <script>
+      // Đối tượng cửa sổ toàn cục
+      console.log(window);
+
+      // Đối tượng tài liệu là một phần của đối tượng cửa sổ
+      console.dir(window.document);
+
+      // Chúng ta có thể truy cập các phần tử DOM trực tiếp với các thuộc tính
+      console.log(document.body);
+      console.log(document.links[0]);
+
+      // Chúng ta có thể thiết lập các thuộc tính của các phần tử
+      // document.body.innerHTML = '<h1>Xin chào từ phần thân</h1>';
+
+      // Đối tượng tài liệu có rất nhiều phương thức. Một trong số đó là `document.write()`, nó sẽ viết một cái gì đó vào tài liệu
+      document.write("Xin chào từ JS");
+
+      // Chúng ta cũng có các phương thức để chọn các phần tử một cách trực tiếp hơn
+      document.getElementById("main").innerHTML =
+        "<h1>Xin chào từ trang chính</h1>";
+
+      document.querySelector("#main h1").innerText = "Xin chào";
+    </script>
+  </body>
+</html>

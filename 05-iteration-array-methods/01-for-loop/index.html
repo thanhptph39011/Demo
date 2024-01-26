@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Loop</title>
+  </head>
+  <body>
+    <h1>For Loop</h1>
+    <script>
+      // for ([initialExpression]; [conditionExpression]; [incrementExpression])
+      //   statement;
+
+      // INITITAL EXPRESSION - Khởi tạo một biến/đếm
+      // CONDITION EXPRESSION - Điều kiện để vòng lặp tiếp tục chạy cho đến khi được đáp ứng hoặc cho đến khi điều kiện là sai
+      // INCREMENT EXPRESSION - Biểu thức sẽ được thực hiện sau mỗi lần lặp. Thường là tăng biến
+      // STATEMENT - Mã sẽ được thực hiện mỗi khi vòng lặp chạy. Để thực hiện một `block` mã, hãy sử dụng cú pháp `{}`
+
+      // for (let i = 0; i <= 10; i++) {
+      //   if (i === 7) {
+      //     console.log('7 là số may mắn của tôi');
+      //   } else {
+      //     console.log('Số ' + i);
+      //   }
+      // }
+
+      // Vòng lặp lồng nhau
+      // for (let i = 1; i <= 10; i++) {
+      //   console.log('Số ' + i);
+
+      //   for (let j = 1; j <= 5; j++) {
+      //     console.log(`${i} * ${j} = ${i * j}`);
+      //   }
+      // }
+
+      // Lặp qua một mảng
+      const names = ["Brad", "Sam", "Sara", "John", "Tim"];
+
+      for (let i = 0; i < names.length; i++) {
+        if (names[i] === "John") {
+          console.log(names[i] + " là người tốt nhất");
+        } else {
+          console.log(names[i]);
+        }
+      }
+    </script>
+  </body>
+</html>
